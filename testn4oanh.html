@@ -11,11 +11,8 @@
 </style>
 </head>
 <body>
-<p>&nbsp;<center><h1><font color="blue">N4　テスト</font> </h1>
-<h3 id="demo" style="color:red"></h3>
-</center></p>
-<table class="tg" style="
-    margin-left: 16%;>
+<p>&nbsp;<center><h1><font color="blue">N4　テスト</font> </h1></center></p>
+<table class="tg">
 <thead>
   <tr>
     <th class="tg-0lax" rowspan="3"><iframe frameborder="0" height="800" marginheight="0" marginwidth="0" src="https://drive.google.com/file/d/1SDSf9g_kgUGtXv1DEXotFSh2gSLj2aRD/preview" width="900">Đang tải…</iframe></th>
@@ -30,37 +27,5 @@
 </thead>
 </table>
 </body>
-<script>
-	  // Thiết lập thời gian đích mà ta sẽ đếm
-	  var countDownDate = new Date().getTime() + 5400000;
-
-	  // cập nhập thời gian sau mỗi 1 giây
-	  var x = setInterval(function() {
-
-		// Lấy thời gian hiện tại
-		var now = new Date().getTime();
-
-		// Lấy số thời gian chênh lệch
-		var distance = countDownDate - now;
-
-		// Tính toán số ngày, giờ, phút, giây từ thời gian chênh lệch
-		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-		// HIển thị chuỗi thời gian trong thẻ p
-		var hoursStr = hours < 10 ? "0" + hours : hours;
-		var minutesStr = minutes < 10 ? "0" + minutes : minutes;
-		var secondsStr = seconds < 10 ? "0" + seconds : seconds;
-		document.getElementById("demo").innerHTML = hoursStr + ": "
-		+ minutesStr + ": " + secondsStr;
-
-		// Nếu thời gian kết thúc, hiển thị chuỗi thông báo
-		if (distance < 0) {
-		  clearInterval(x);
-		  document.getElementById("demo").innerHTML = "Thời gian làm bài đã hết";
-		}
-	  }, 1000);
-</script>
 </html>
 
