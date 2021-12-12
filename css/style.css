@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #eee;
+    background: #F5F6F7;
 }
 
 .wrapper {
@@ -35,7 +35,7 @@ form input {
     outline: none;
     border-radius: 8px;
     margin-bottom: 10px;
-    background: #eee;
+    background: #F5F6F7;
     border: 1px solid gray;
 }
 
