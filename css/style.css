@@ -13,9 +13,9 @@ body {
     width: 350px;
     margin: 60px auto;
     padding: 30px 20px;
-    border-radius: 7px;
+    border-radius: 8px;
     background: #fff;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -30,10 +30,10 @@ form {
 form input {
     display: block;
     width: 100%;
-    padding: 7px;
+    padding: 8px;
     border: none;
     outline: none;
-    border-radius: 7px;
+    border-radius: 8px;
     margin-bottom: 10px;
     background: #eee;
     border: 1px solid gray;
@@ -50,20 +50,21 @@ form p a {
 
 button {
     width: 100%;
-    padding: 7px;
+    padding: 8px;
     border: none;
     outline: none;
-    border-radius: 7px;
-    font-size: 16px;
-    color: #eee;
-    background: #000;
-    border: 1px solid #000;
+    border-radius: 6px;
+    font-size: 20px;
+    color: #fff;
+    background: #166fe5;
+    border: 1px solid #166fe5;
 }
 
 button:hover {
-    color: rgb(0, 0, 0);
+    color: #166fe5;
     transition: 1s;
     background: transparent;
+    cursor: pointer;
 }
 
 .or {
@@ -95,4 +96,14 @@ i:hover {
 
 p {
     text-align: center;
+}
+
+.uiBoxYellow {
+    background-color: #fff9d7;
+    border: 1px solid #e2c822;
+    color: #000;
+    font-size: 18px;
+    text-align: center;
+    padding: 8px;
+    margin: 10px 0;
 }
