@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Youtube Video Player</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+</head>
+
+<body class="bg-light">
+  <div class="col-md-6 offset-md-3 mt-5">
+    <div class="card">
+      <div class="card-header bg-light">
+        <h3 >Youtube Video Player</h3>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label class="text-weight"><b>Youtube Video Link:</b></label>
+              <input type="txt" name="link" class="form-control link" required>
+            </div>
+          </div>
+        </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label class="text-weight"><b>Select Video Size:</b></label>
+                <select class="form-control sizes" required>
+                  <option value="560x315" selected>560x315</option>
+                  <option value="640x360">640x360</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group mt-4">
+                <button class="btn btn-success btn-block click-btn-play">Play</button>
+            </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group mt-4 download-video">
+            </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</body>
+
+<script type="text/javascript">
+    function getVideoId(url) {
+            const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+            const match = url?.match(regExp);
+            return (match && match[2].length === 11)
+            ? match[2]
+            : null;
+        }
+
+    $(".click-btn-play").click(function(){
+            var link = $(".link").val();
+            const videoId = getVideoId(link);
+            var size = $(".sizes").children("option:selected").val();
+            var width = size.split('x')[0]
+            var height = size.split('x')[1]
+            var text = `<iframe width="${width}" height="${height}" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen></iframe>`
+            $('.download-video').html(text);
+    });
+
+</script>
+</html>
